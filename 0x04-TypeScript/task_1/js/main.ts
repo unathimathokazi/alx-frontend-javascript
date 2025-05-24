@@ -41,3 +41,18 @@ function createStudent(
 const student = createStudent(StudentClass, 'Unathi', 'Mathokazi');
 console.log(student.displayName());        // Output: Unathi
 console.log(student.workOnHomework());    // Output: Currently working
+// String literal type for Subjects
+type Subjects = 'Math' | 'History';
+
+// Function that returns what class is being taught
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else {
+    return 'Teaching History';
+  }
+}
+
+// Example usage
+console.log(teachClass('Math'));    // Output: Teaching Math
+console.log(teachClass('History')); // Output: Teaching History

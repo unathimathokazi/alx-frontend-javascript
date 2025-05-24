@@ -1,3 +1,4 @@
+
 const path = require("path");
 
 module.exports = {
@@ -8,6 +9,11 @@ module.exports = {
       {
         test: /\.tsx?$/, 
         use: "ts-loader",
+        exclude: /node_modules/
+      },
+      {
+        test: /\.js$/,
+        type: "javascript/esm",
         exclude: /node_modules/
       }
     ]
